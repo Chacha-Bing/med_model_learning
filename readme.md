@@ -2,6 +2,8 @@
 这是一个用于个人学习的项目，此项目基于 Transformers 从0到1训练一个医疗大模型。
 
 数据集、算法框架均来源于 Huggingface，下面会详细讲到。大部分代码均为生成式代码，但是很好理解。
+
+详细的步骤和解释参考我在掘金上的记录文章：https://juejin.cn/post/7602789520035512330
 ## 项目三阶段流程
 
 ### 阶段 1：预训练（Pre-training）
@@ -78,3 +80,4 @@ med_model_learning/
 │
 └── compare_diffrent_model.py                   # 同时比较三个模型的脚本
 ```
+更详细的步骤和解释参考我在掘金上的记录文章：https://juejin.cn/post/7602789520035512330
