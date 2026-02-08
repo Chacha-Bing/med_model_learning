@@ -47,6 +47,13 @@
 | dataset数据量 | 630MB (370000条) | 630MB (370000条) | 3.5MB (5000条) | 3.1MB (3800条) |
 | 耗时 | 10min | 10.5h | 较快 | 13.5h (仅执行7h-31%) |
 
+## 接口
+为 https://github.com/Chacha-Bing/next-medical-ai 项目提供接口
+
+model_server.py：向外提供模型调用接口
+
+model_server_streaming.py：提供 streaming 流式调用接口
+
 ## 项目文件树
 
 ```
@@ -69,7 +76,7 @@ med_model_learning/
 ├── sft/                                        # 监督微调阶段（Supervised Fine-Tuning）
 │   ├── py/                                     # Python 脚本
 │   │   ├── sft_train.py                        # SFT 训练脚本
-│   │   ├── sft_model_chat.py                  # 模型推理/聊天脚本
+│   │   ├── sft_model_chat.py                   # 模型推理/聊天脚本
 │   └── dataset/                                # SFT 数据集
 │
 ├── dpo/                                        # 直接偏好优化阶段（Direct Preference Optimization）
@@ -78,6 +85,8 @@ med_model_learning/
 │   │   └── med_dpo_checkpoints/                # DPO 训练检查点
 │   └── dataset/                                # DPO 数据集
 │
-└── compare_diffrent_model.py                   # 同时比较三个模型的脚本
+├── compare_diffrent_model.py                   # 同时比较三个模型的脚本
+├── model_server.py                             # 向外提供模型调用接口
+└── model_server_streaming.py                   # 提供 streaming 流式调用接口
 ```
 更详细的步骤和解释参考我在掘金上的记录文章：https://juejin.cn/post/7602789520035512330
